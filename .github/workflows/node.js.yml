@@ -9,7 +9,7 @@ on:
 
 jobs:
   build:
-    if: ${{ github.event.label.name == 'codeceptjs' }}
+    if: ${{ github.event.label.name == 'codecept' }}
     runs-on: ubuntu-latest
 
     strategy:
