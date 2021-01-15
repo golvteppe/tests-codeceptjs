@@ -4,11 +4,12 @@
 name: Node.js CI
 
 on:
-  [ workflow_dispatch, push ]
+  pull_request:
+    types: [ labeled ]
 
 jobs:
   build:
-
+    if: ${{ github.event.label.name == 'codeceptjs' }}
     runs-on: ubuntu-latest
 
     strategy:
