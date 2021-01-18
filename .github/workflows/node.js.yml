@@ -22,7 +22,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
-    - run: npm run codeceptjs:headless --reporter mochawesome
+    - run: npm run codeceptjs:headless --reporter mochawesome --reporter-options reportDir=/home/runner/work/tests-codeceptjs/tests-codeceptjs/output/
     - name: Archive code coverage results
       uses: actions/upload-artifact@v2
       with:
