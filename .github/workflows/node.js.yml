@@ -22,6 +22,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
+    - run: npm i mochawesome
     - run: npm run codeceptjs
     - name: Archive code coverage results
       uses: actions/upload-artifact@v2
